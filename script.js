@@ -5,7 +5,7 @@ function getFetch(){
     const choice = document.querySelector("input").value
     console.log(choice)
 
-    const url = "https://api.nasa.gov/planetary/apod?api_key=5v0dtub4I4Aeci75CYMSVMIG9dRCrmnE3yVqkMoz"
+    const url = "https://api.nasa.gov/planetary/apod?api_key=5v0dtub4I4Aeci75CYMSVMIG9dRCrmnE3yVqkMoz";
 
     fetch(url)
            .then(res => res.json()) // parse response as json
@@ -16,20 +16,21 @@ function getFetch(){
            })
 
            .catch(err => {
-            console.log("error  ${err}")
+            console.log(`error  ${err}`)
 
            });
 }
 
 // om Nasa Image Video endpiont...
-let url  = "https://api.nasa.gov/search?q=space";
+let url  = "https://images-api.nasa.gov/search?q=space";
 const button = document.querySelector("button");
 button.addEventListener("click", () => {
-    const search = document.querySelector("search");
+    const search = document.querySelector("#search");
 
-
+    url  = `https://images-api.nasa.gov/search?q=${search.value}`
     fetch(url).then(response => response.json()).then((data) => {
         console.log("data" ,data);
+
     })
-})
+});
 
