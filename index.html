@@ -4,60 +4,59 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <title>NASA API Application</title>
 </head>
 <body>
-    <nav>
-        <div class="logo">Liibaan</div>
-        <input type="checkbox" id="click">
-        <label for="click" class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </label>
-        <ul>
-          <li><a class="active" href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Gallery</a></li>
+    <header>
+        <a href="#" class="logo"><span>Space App</span></a>
+        <ul class="navbar">
+            <li><a href="#" class="active"> Home </a></li>
+            <li><a href="gallery.html"> Gallery </a></li>
+            <button type="button" name="search" id="search-button" style="color: #fff; background: transparent; font-size: 1.1rem; border: none; cursor: pointer;">Search</button>
         </ul>
-      </nav>
-      <div class="content-1">
-        <div>Picture Of The Day</div>
-        <input type="date" name="" value="">
-        <input type="text" id="search">
-        <button type="button" name="button">Get media</button>
-        <button type="button" name="button">Search</button>
-        <div>Nasa Rulles</div>
-        <img src="img" alt="" width="480">
-        <div>Explanation</div>
-      </div>
-   <script src="script.js"></script>
-   <footer>
-    <div class="content">
-      <div class="left box">
-        <div class="upper">
-          <div class="topic">About us</div>
+    </header>
+    <main>
+        <h2>Space Information Application</h2><br><br>
+        <h3 style="color: #29fd53;"> <strong style="color: red;">Note:</strong> This application is developed for educational purposes related to space and space research information, as a first time visitor 
+            please click the above search button to see the Astronomy picture of the day.<br><br></h3>
+        <div id="content-1">
+
         </div>
-        <div class="lower">
-          <div class="topic">Contact us</div>
-          <div class="phone">
-            <a href="#">0763251961</a>
-          </div>
-          <div class="email">
-            <a href="#">Nabiil_cade@live.se</a>
-          </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-left">
+            <h2>Contact Us</h2>
+            <div class="socials">
+                <a href="#"><img src="images/fb.png" alt="facebook icon"></a>
+                <a href="#"><img src="images/tw.png" alt="twitter icon"></a>
+                <a href="#"><img src="images/lk.png" alt="linkedin icon"></a>
+                <a href="#"><img src="images/ig.png" alt="instagram icon"></a>
+                <a href="#"><img src="images/email.png" alt="email icon"></a>
+            </div>
         </div>
-      </div>
-      <div class="middle box">
-        <div class="topic">Our Services</div>
-        <div><a href="#">Nasa 1</a></div>
-        <div><a href="#">Nasa 2</a></div>
-        <div><a href="#">Nasa 3</a></div>
-      </div>
-    </div>
-    <div class="bottom">
-      <p>Copyright © 2023 <a href="#">Liibaan Abdulle</a> All rights reserved</p>
-    </div>
-  </footer>
-    </div>
+        <ul class="footer-right">
+            <li>
+                <h2>Useful Links</h2>
+                <ul class="box">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </li>
+            <li>
+                <h2>Address</h2>
+                <ul class="box">
+                    <li><a href="#">JESPERSGATAN 28C</a></li>
+                    <li><a href="#">21445, Sweden</a></li>
+                    <li><a href="#">Malmö</a></li>
+                    <li><a href="#">Sweden</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="footer-bottom">
+            <span>Copyright &copy; 2023 <a href="#"> Liibaan Abdulle</a> All rights Reserved.</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
