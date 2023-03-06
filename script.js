@@ -41,9 +41,11 @@
             console.log("Search data", data);
             if(imageCheckBox.checked == true){
                 imageSearchApiData(data);
+                //imageSearchApiData.preventDefault();
             }
             else if(videoCheckBox.checked == true) {
                 videoSearchApiData(data);
+                //videoSearchApiData.preventDefault();
             }
             else {
                 document.querySelector("#search-content").innerHTML += `<h1>No Data Found!!! Please Check that you checked the checkbox. </h1>`
@@ -59,7 +61,7 @@
                 document.querySelector("#search-content").innerHTML += `<h3>Date Created: "${filteredArray[i].data[0].date_created}"</h3>`
                 document.querySelector("#search-content").innerHTML += `<h4>Center: "${filteredArray[i].data[0].center}"</h4>`
                 document.querySelector("#search-content").innerHTML += `<p>Description: "${filteredArray[i].data[0].description}"</p>`
-                document.querySelector("#search-content").innerHTML += `<img src="${filteredArray[i].links[0].href}" width="840px">`
+                document.querySelector("#search-content").innerHTML += `<img src="${filteredArray[i].links[0].href}" width="480">`
             }
     }
     function videoSearchApiData(data){
@@ -71,7 +73,8 @@
             document.querySelector("#search-content").innerHTML += `<h3>Date Created: "${filteredArray[i].data[0].date_created}"</h3>`
             document.querySelector("#search-content").innerHTML += `<h4>Center: "${filteredArray[i].data[0].center}"</h4>`
             document.querySelector("#search-content").innerHTML += `<p>Description: "${filteredArray[i].data[0].description}"</p>`
-            document.querySelector("#search-content").innerHTML += `<iframe src="${filteredArray[i].links[0].href}"></iframe>`
+            document.querySelector("#search-content").innerHTML += `<video width="320" height="240" controls><source src="${filteredArray[i].links[0].href}.mp4" type="video/mp4"<source src="${filteredArray[i].links[0].href}.ogg" type="video/ogg"></video>`
+            
         }
 }
     
